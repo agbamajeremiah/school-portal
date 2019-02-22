@@ -1,0 +1,389 @@
+body{
+	background: #fff;
+	height: 100%;
+	width: 100%;
+}
+/* navbar */
+.navbar {
+	justify-content: space-between;
+	padding: .3rem .7rem;
+	background-color:#004d99;
+	height: 8vh;
+}
+.navbar-dark .navbar-toggler {
+	border: none;
+	font-size: 1.8rem;
+	color: #fff;
+	outline: none;
+	padding: 3px;
+}
+h2.portal-header{
+	color: #fff;
+	text-align: center;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 1;
+}
+.profile-pics{
+	margin-right: 20px;
+}
+.profile-pics img {
+	border: 1px solid #fff;
+	border-radius: 50%;
+}
+
+#wrapper{
+	display: flex;
+	width: 100%;
+}
+#side-drawer {
+	width: 0;
+	position: fixed;
+	top: 8vh;
+	left: 0;
+	height:92vh;
+	z-index: 999;
+	overflow-y: hidden;
+	background:#001a33;
+	color: #bfbfbf;
+	transition: all 0.3s;
+}
+
+#page-content{
+	margin-top: 8vh;
+	width: 100%;
+	transition: all 0.3s;
+	background-color: #e2e6e9;
+}
+#wrapper.toggle #side-drawer{
+	width: 250px;
+}
+#wrapper.toggle #page-content{
+	padding-left:  250px;
+}
+a[data-toggle="collapse"] {
+	position: relative;
+}
+.dropdown-toggle::after {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+}
+#side-drawer ul p {
+	color: #bfbfbf;
+	font-size: 11px;
+	padding: 10px;
+	margin: 0;
+	text-transform: uppercase;
+	background:  #0e1a25;
+	letter-spacing: 1px;
+}
+a, a:hover, a:focus {
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+#side-drawer ul.components{
+	padding: 0;
+	margin-bottom: 0;
+	border-bottom: 1px solid #47748b;
+}
+#side-drawer ul li a {
+	display: block;
+	padding: 10px;
+	font-size: 1em;
+}
+#side-drawer ul li a:hover {
+	color: #bfbfbf;
+	background: #0e1a25;
+	opacity: 0.9;
+}
+#side-drawer ul li.active > a, a[aria-expanded="true"] {
+	color: #bfbfbf;
+	background: #0e1a25;
+}
+ul.components ul  li a {
+	font-size: .8em !important;
+	padding-left: 25px !important;
+	background: #0e1a25;
+}
+ul.components ul  li a:hover, ul.components ul  li a:focus{
+	font-size: .9em !important;
+	transition: all 0.3s;
+}
+ .components .fa {
+	margin: 0 5px 0 0;
+}
+.btn-link {
+	font-weight: 400;
+	font-size: 16px;
+	color: #bfbfbf;
+	margin-top: 5px;
+	width: 100%;
+	background-color: transparent;
+	padding: 5px 12px;
+	text-align: left;
+}
+.btn-link:hover {
+	text-decoration: none;
+	color: #bfbfbf;
+	background: #0e1a25; 
+	font-size: 18px;
+	transition: all 0.3s;
+}
+.btn-link:focus {
+	text-decoration: none;
+}
+#home-dashboard {
+	height: 72vh;
+	color: #33334d;
+	padding: 40px;
+}
+#home-dashboard p#login-message{
+ 	font-size: 15px;
+ 	line-height: 1.1em;
+ }
+#home-dashboard p #student-name{
+	text-transform: lowercase;
+	text-decoration: underline;
+}
+#home-dashboard p .result-home{
+	color: blue;
+}
+#home-dashboard p .result-home:hover {
+	color: #fff;
+	background-color: #33334d;
+}
+/* View Profile */
+#view-profile{
+	background-color: #e2e6e9;
+	padding-top: 7px;
+	padding-bottom: 10px;
+}
+div.profile-box {
+	width: 50%;
+	color: #000;
+	margin: auto;
+	background-color: #fff;
+	border-top: 2px solid #004d99;
+	border-radius: 3px;
+}
+div.profile-box h5 {
+	padding: 7px;
+	border-bottom: 1px solid #e6e6e6;
+}
+div.profile-box-main{
+	text-align: center;
+	margin: 25px;
+}
+.profile-pics-main {
+	position: relative;
+	border: 2px solid #2F4F4F;
+	border-radius: .45rem;
+	margin: 0 auto;
+	width: 120px;
+	height: 120px;
+	margin-bottom: 10px;
+} 
+.profile-pics-main img {
+	width: 100%;
+	height: 100%;
+	border-radius: .45rem;
+}
+.profile-pics-main .btn-clear {
+	position: absolute;
+	right: 0px;
+	bottom: 1px;
+	background-color: transparent;
+	color: #000;
+	font-size: 13px;
+	padding: 2px 4px 0px 3px;
+}
+.profile-pics-main .btn-clear:hover {
+	background-color: #fff;
+}
+div.profile-box-main h6 {
+	font-size: 1.2rem;
+	line-height: 1em;
+	text-transform: uppercase;
+	padding: 10px;
+}
+.btn-info {
+	margin: 3px;
+	border-radius: 0;
+	background-color: #004d99;
+	font-size: 13px;
+	border: none;
+	padding: .300rem .75rem;
+}
+.table td, .table th {
+	padding: .40em;
+	padding-left: .50em;
+	vertical-align: middle;
+	border: 1px solid #dee2e6;
+	letter-spacing: 0.5px;
+	text-transform: capitalize;
+}
+/* Edit Profile */
+#edit-profile{
+	padding: 20px;
+	height: 92vh;
+	background-color: #fff;
+	text-align: center;
+}
+
+/* View Result */
+#view-result{
+	padding: 30px;
+}
+#view-result #student-name{
+	font-size: 25px;
+}
+#view-result #student-class{
+	font-size: 20px;
+	color: brown;
+}
+ #view-result .result-container{
+ 	height: 700px;
+ 	margin-top: 20px;
+ 	background-color: #fff;
+ 	position: relative;
+ }
+ .download-btn {
+ 	position: absolute;
+ 	margin: auto;
+ 	bottom: 10px;
+ }
+  #view-result .previous-result{
+  	width: 100%;
+  	padding: 20px;
+  	padding-left: 5px;
+  	text-align: left;
+  }
+ .previous-result ul.list-unstyled {
+
+  }
+  .previous-result ul.list-unstyled li{
+  	display: inline;
+  	margin-left: 5px;
+  	margin-right: 5px;
+  	padding: 2px 4px;
+  	color: #fff;
+  	background-color: #004d99;
+  }
+.footer-class{
+	font-size: 14px;
+	color: #000;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+@media (max-width: 768px){
+	.profile-pics{
+		margin-right: 5px;
+	}
+	.profile-pics img {
+		width: 32px;
+		height: 32px;
+	}
+	h2.portal-header{
+		font-weight: lighter;
+		font-size: 25px;
+	}
+	#wrapper.toggle #side-drawer{
+		width: 200px;
+	}
+	#wrapper.toggle #page-content{
+		padding-left:  200px;
+	}
+	div.profile-box {
+		width: 80%;
+		margin: auto;
+	}
+}
+@media (max-width: 400px){
+	.profile-pics{
+		margin-right: 0;
+	}
+	.navbar-dark .navbar-toggler{
+		font-size: 1.4rem;
+	}
+	.profile-pics img {
+		width: 30px;
+		height: 30px;
+	}
+	h2.portal-header{
+		padding-top: 5px;
+		font-size: 17px !important;
+	}
+	#side-drawer ul p {
+		font-size: .6em;
+		padding: 10px;
+		letter-spacing: normal;
+	}
+	#side-drawer ul li a {
+		font-size: .75em;
+	}
+	ul.components ul  li a {
+		font-size: .7em !important;
+		padding-left: 25px !important;
+		background: #0e1a25;
+	}
+	ul.components ul  li a:hover, ul.components ul  li a:focus{
+		font-size: .8em !important;
+		transition: all 0.3s;
+	}
+	.btn-link {
+		font-size: .8em;
+		margin-top: 2px;
+		width: 100%;
+		padding: 5px 12px;
+	}
+	.btn-link:hover {
+		font-size: .9em;
+	}
+	 #home-dashboard p#login-message{
+ 		font-size: 13px;
+ 	}
+	div.profile-box {
+		width: 100%;
+		margin: 0 5px;
+	}
+	.profile-pics-main {
+		position: relative;
+		width: 105px;
+		height: 105px;
+		margin-bottom: 10px;
+	} 
+	.profile-pics-main .btn-clear {
+		font-size: 13px;
+		bottom: 0px;
+	}
+	div.profile-box-main h6 {
+		font-size: 1rem;
+		line-height: 1em;
+		padding: 8px;
+	}
+	.btn-info {
+		margin: 0;
+		font-size: 12px;
+		padding: .250rem .75rem;
+	}
+	.table td, .table th {
+		padding: .30;
+		font-size: 12px !important;
+	}
+	#view-result #student-name{
+		font-size: 20px;
+	}
+	#view-result #student-class{
+		font-size: 15px;
+	}
+	.footer-class{
+		font-size: 12px;
+	}
+	
+}
