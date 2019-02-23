@@ -1,3 +1,16 @@
+<?php 
+  if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+
+    $student = new Student;
+	$studentinfo = $student->getStudent($username);
+	$student_full_name = $studentinfo->surn_name.' '.
+						$studentinfo->first_name. ' '.
+						$studentinfo->last_name;
+  }else{
+  	redirect('login-page.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

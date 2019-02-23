@@ -1,11 +1,4 @@
 <?php include_once 'config/init.php'; ?>
-<?php 
-  if (isset($_SESSION['username'])) {
-    $username = $_SESSION['username'];
-  }else{
-  	redirect('login-page.php');
-  }
-?>
 <?php require 'pages/header.php'; ?>
 <!-- side drawer -->
 <?php require 'pages/side-drawer.php'; ?>

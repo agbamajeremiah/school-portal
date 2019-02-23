@@ -17,6 +17,7 @@
 					$_SESSION['username'] = $username;
 					echo '<br> username: '.$_SESSION['username']. ' set';
 					redirect('portal-home.php');
+					// SET CSRF
 				}
 				//invalid Pin
 				else{
@@ -26,7 +27,7 @@
 			}
 			else{
 				//user dosent exist
-				redirect('login-page.php', "User dosn't exist" , 'error');
+				redirect('login-page.php', "Invalid Username" , 'error');
 
 			}
 		}

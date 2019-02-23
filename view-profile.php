@@ -1,17 +1,4 @@
 <?php include_once 'config/init.php'; ?>
-<?php 
-  if (isset($_SESSION['username'])) {
-    $username = $_SESSION['username'];
-
-    $student = new Student;
-	$studentinfo = $student->getStudent($username);
-	$student_full_name = $studentinfo->surn_name.' '.
-						$studentinfo->first_name. ' '.
-						$studentinfo->last_name;
-  }else{
-  	redirect('login-page.php');
-  }
-?>
 <?php require 'pages/header.php'; ?>
 <!-- side drawer -->
 <?php require 'pages/side-drawer.php'; ?>

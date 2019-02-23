@@ -116,13 +116,13 @@ ul.components ul  li a:hover, ul.components ul  li a:focus{
  .components .fa {
 	margin: 0 5px 0 0;
 }
-.btn-link {
+a.btn-link {
 	font-weight: 400;
 	font-size: 16px;
 	color: #bfbfbf;
-	margin-top: 5px;
+	margin-top: 0px;
 	width: 100%;
-	background-color: transparent;
+	background-color:  #001a33;
 	padding: 5px 12px;
 	text-align: left;
 }

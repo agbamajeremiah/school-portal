@@ -56,7 +56,7 @@
                           <div class="dropdown-menu alunmi" aria-labelledby="navbarDropdown">
                           		<h4 class="alumni-head">Meet successful student of our school & learn more</h4>
                           		<div class="row">
-                          			<div class="col-lg-6">
+                          			<div class="col-lg-12">
                           				 <a class="dropdown-item" href="#">Departments</a>
 	                            
 					                      <a class="dropdown-item" href="#">Competitions</a>
@@ -65,15 +65,7 @@
 					                        
 					                     <a class="dropdown-item" href="#">Fees</a>
                           			</div>
-                          			<div class="col-lg-6">
-                          				 <a class="dropdown-item" href="#">Departments</a>
-	                            
-					                      <a class="dropdown-item" href="#">Competitions</a>
-					                        
-					                      <a class="dropdown-item" href="#">Vocationals</a>
-					                        
-					                     <a class="dropdown-item" href="#">Fees</a>
-                          			</div>
+                          			>
                           		</div>
                           </div>
                       </li>
@@ -121,7 +113,7 @@
         		<h2>Welcome to i-school</h2>
         		<p>Preparing student for successful future</p>
         		<div>
-        			<a  class="btn btn-primary btn-md" href="#">Read More &raquo;<span></span> </a>
+        			<a  class="btn btn-primary btn-md" href="#news">Read More &raquo;<span></span> </a>
         		</div>
         	</div>
         </div>
@@ -131,6 +123,7 @@
     <div class="container main">
     	<div class="row">
     		<div class="col-lg-8 col-sm-12 news-section">
+           <a id="news"></a>
     			<h3 class="news-header">News & Anouncement</h3>
     		</div>
     		<div class="col-lg-4 col-sm-12 event-section">
@@ -158,5 +151,14 @@
       <!-- Javascript -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    $('a.btn').click(function(){
+      var sectionTo = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(sectionTo).offset().top
+      },1300);
+      });
+  </script>
 </body>
 </html>

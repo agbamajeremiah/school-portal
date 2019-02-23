@@ -28,7 +28,8 @@
 						</ul>
 					</li>
 				</ul>
-				<button class="btn btn-link" type="button">
+				<a href="logout.php?action=logout" class="btn btn-link" type="button">
 					<span class="fa fa-power-off"></span><span id="logout-btn"> Logout</span>
-				</button>
+				</a>
+					
 				</div>
